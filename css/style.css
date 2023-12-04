@@ -1,0 +1,249 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+.background-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  
+}
+
+body, h1, h2, h3, h4, h5, h6, p, div, span, li, ul, tr, td, th, ol, header, footer {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+img {
+  width: 100%;
+}
+
+input:focus,
+button:focus,
+textarea:focus,
+select:focus {
+  box-shadow: 0px 0px 0px transparent !important;
+}
+
+.h-90vh {
+  height: 90vh;
+}
+
+.w-200px {
+  width: 200px;
+}
+
+.w-250px {
+  width: 250px;
+}
+.w-fit {
+  width: fit-content !important;
+}
+.w-15 {
+  width: 15%;
+}
+.w-30 {
+  width: 30%;
+}
+
+.bg-overlay {
+  position: relative;
+}
+
+.bg-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 75%);
+  z-index: 0;
+}
+
+.slider {
+  display: block;
+  -webkit-appearance: none;
+  background-color: #bdc3c7;
+  width: 500px;
+  height: 5px;
+  border-radius: 10px;
+  margin: 0 auto;
+  outline: 0;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #70ad47;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background-color: white;
+  border: 2px solid #70ad47;
+}
+
+.slider::-webkit-slider-thumb:active {
+  transform: scale(1.4);
+}
+
+.bg-theme {
+  background-color: #70ad47;
+}
+
+.selector {
+  position: relative;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.selector-item_radio {
+  appearance: none;
+  display: none;
+}
+
+.selector-item_label {
+  border: 1px solid #70ad47;
+  position: relative;
+  position: relative;
+  height: 70px;
+  width: 70px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 50%;
+  line-height: 400%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  transition-duration: 0.5s;
+  transition-property: transform, box-shadow;
+  transform: none;
+}
+
+.selector-item_radio:checked + .selector-item_label {
+  background-color: #70ad47;
+  color: #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  width: 100px;
+  color: white;
+  font-size: 12px;
+  background-color: #192733;
+  border-radius: 10px;
+  padding: 10px 15px 10px 15px;
+}
+
+.hover-text:hover .tooltip-text {
+  visibility: visible;
+}
+
+#top {
+  top: -40px;
+  left: -50%;
+}
+
+#bottom {
+  top: 25px;
+  left: -50%;
+}
+
+#left {
+  top: -8px;
+  right: 120%;
+}
+
+#right {
+  top: -8px;
+  left: 120%;
+}
+
+.hover-text {
+  position: relative;
+  display: inline-block;
+  margin: 40px;
+  text-align: center;
+}
+
+/*-----tooltip-----*/
+.tooltip {
+  position: relative;
+  background: #ff3466;
+  padding: 5px 12px;
+  margin: 5px;
+  font-size: 15px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.tooltip:before,
+.tooltip:after {
+  position: absolute;
+  content: "";
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.tooltip:before {
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color: #ff3466 transparent transparent transparent;
+  top: -15px;
+  transform: translateY(28px);
+}
+
+.tooltip:after {
+  content: attr(data-tooltip);
+  background: #ff3466;
+  width: 160px;
+  height: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  top: -75px;
+  left: -10px;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transform: translateY(20px);
+}
+
+.tooltip:hover::before,
+.tooltip:hover::after {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  70% {
+    transform: rotate(3deg);
+  }
+  0% {
+    transform: rotate(0deg);
+  }
+}
+
+#animation:hover {
+  animation: shake 500ms ease-in-out forwards;
+}
+
+.result-section {
+  display: none;
+}
